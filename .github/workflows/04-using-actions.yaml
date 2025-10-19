@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 04-using-actions-react-app
+        working-directory: 04-using-actions/react-app
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '22.x'
 
