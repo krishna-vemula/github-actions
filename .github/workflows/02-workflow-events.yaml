@@ -1,4 +1,4 @@
-name: workflow-events
+name: 02-workflow-events
 on: push
 
 jobs:
@@ -7,4 +7,3 @@ jobs:
     steps:
       - name: Triggered by push event
         run: echo "This job is triggered by a ${{ github.event_name }}"
-        
