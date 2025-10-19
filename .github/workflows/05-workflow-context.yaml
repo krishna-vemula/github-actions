@@ -1,20 +1,15 @@
-name: 05-context-information
+name: 05-workflow-context
 
 on: push
 
 jobs:
   show-context:
     runs-on: ubuntu-latest
-      steps:
-        - name: Display GitHub Context
-            run: |
-            echo "Repository: ${{ github.repository }}"
-            echo "Event Name: ${{ github.event_name }}"
-            echo "SHA: ${{ github.sha }}"
-            echo "Ref: ${{ github.ref }}"
-            echo "Actor: ${{ github.actor }}"
-            echo "Workflow: ${{ github.workflow }}"
-            echo "Job: ${{ github.job }}"
-            echo "Run ID: ${{ github.run_id }}"
-            echo "Run Number: ${{ github.run_number }}"
-
+    steps:
+      - name: Display GitHub Context
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Event Name: ${{ github.event_name }}"
+          echo "SHA: ${{ github.sha }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"
